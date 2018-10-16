@@ -1,91 +1,68 @@
-nav {
-    background-color: black;
-    border-color: #cccccc;
-    color: white;
-    font-family: 'Georgia', Times, 'Times New Roman', serif;
-}
 
-.navbar{
-    padding: 0;
-    margin: 0 auto;
-}
+body{
+    font-family: 'Montserrat', sans-serif;
 
-main{
-    background: url(http://33.media.tumblr.com/25831ab94f82d84fe45b164d247b9732/tumblr_nb0vlvr2Zf1s0oildo1_400.gif) no-repeat center center fixed;
+    background: url(../images/car2.jpg) no-repeat center center fixed;
     background-size: cover;
     padding-top: 40px;
-    padding-bottom: 200px;
     overflow: auto;
-    opacity: 0.7;
 }
 
 
-.navbar-brand {
-    padding-top: 10%;
+.delay-1{
+    animation-delay: 1.5s;
+}
+
+h1{
     font-size: 60px;
-    color: darkred !important;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-}
-
-
-.hero-wrap {
-    padding-top: 5px;
-    padding-bottom: 80px;
-    text-align: center;
-    font-size: 48px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
-    font-weight: bold;
-    background-color: darkslategray;
-    max-width: 50%;
-    max-height: 50%;
-    margin: 0 auto;
-    margin-top: 5%;
-
-
-}
-
-.hero-wrap .hero-search {
-    display: inline-block;
-    margin: 40px 0;
-    padding: 0;
-    border: none;
     text-align: center;
-    
+    margin-top: 7%;
 }
 
-.navbar.navbar-inverse.navbar-fixed-top {
-    font-family: 'Quicksand', sans-serif;
-    background: rgba(0,0,0,0.0) !important;
-    padding-bottom: 4.1%;
-    border-bottom-color:  rgba(0,0,0,0.0) !important;
+h2{
+    font-size: 25px;
+    color: rgb(136, 1, 1);
+    /* margin-left: 15%; */
     text-align: center;
-}
-
-.header-h1{
-    color: darkred !important;
-    margin-bottom: -2%;
-    font-size: 70px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-   margin-top: -1%;
-}
-
-.hero-cta{
-    font-size: 35px;
+    margin-top: 0%;
     font-weight: bold;
 }
 
-.input-group{
+h3{
+ display: inline;
+}
+
+p{
     font-size: 20px;
-    margin-top: -10%;
-    margin-bottom: -10%;
-    
 }
 
+#header-top{
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.game-info{
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    width: 280px; 
+    margin-top: 10%;
+}
 
+#wins{
+    font-size: 25px;
+}
+
+#losses{
+    font-size: 25px; 
+}
+
+#winslosses{
+    text-align: center;
+    margin: 0 auto;
+     width: 100px; 
+}
 
 
 

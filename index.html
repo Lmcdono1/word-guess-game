@@ -6,33 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Car Parts Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!--My CSS-->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 
 <body>
-    <main>
-        <h1 class="header-h1">Car Parts Hangman</h1>
-        <div class="hero-wrap">
-            <h1 id= "header" class="hero-cta">Press any key to start!</h1>
-            <form class="hero-search" role="search">
-                <div class="input-group">
-                    <h2>Wins:</h2>
-                    <p id="wins"></p>
-                    <h2>Current Word:</h2>
-                    <p id="currentWord"></p>
-                    <h2>Number of guesses remaining:</h2>
-                    <p id="remainingGuess"></p>
-                    <h2>Letters already guessed:</h2>
-                    <p id="letterGuess"></p>
-                </div>
-            </form>
+
+    <div class="header-top">
+        <h1 class="animated slideInLeft">CAR PARTS HANGMAN</h1>
+        <h2 class="animated fadeIn slower delay-1" id="header">Press any letter to start</h2>
+        <!-- <h1 class="header-h1">Car Parts Hangman</h1> -->
+    </div>
+
+    <!-- <h1 id= "header" class="hero-cta">Press any key to start!</h1> -->
+    <!-- <form class="hero-search" role="search"> -->
+    <div class="game-info">
+        <div class="input-group animated fadeIn slower delay-1">
+            <h3>WINS:</h3>&nbsp;<span id="wins"></span>&nbsp;&nbsp;
+            <!-- <p id="wins"></p>&nbsp;&nbsp; -->
+            <h3>LOSSES:</h3>&nbsp;<span id="losses"></span>
+            <!-- <p id="losses"></p>  -->
             <br>
             <br>
-    </main>
-    <script type="text/javascript" src="assets/javascript/game.js">
-    </script>
+            <h3>WORD:</h3> &nbsp;
+            <p id="currentWord"></p>
+            <br>
+            <h3>GUESSES REMAINING:</h3>
+            <p id="remainingGuess"></p>
+            <!-- <p id="remainingGuess"></p> -->
+            <br>
+            <h3>LETTERS GUESSED:</h3>
+            <p id="letterGuess"></p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>

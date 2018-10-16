@@ -18,7 +18,8 @@ var wordChoice = [
 //Parameters_________________
 var gameStarted = false;    //Game begins
 var gameOver = false;       //user maxes out tries and game ends 
-var wins = 0;               //user total wins 
+var wins = 0;
+var losses = 0;               //user total wins 
 var letterGuess = [];       //Letters user has guessed
 var currentWord;            //Current word chosen from array to guess
 var guessWord = [];         //Building letters for word match
@@ -27,6 +28,7 @@ var remainingGuess = 0;     //How many tries user has left
 //HTML Link
 function updateDisplay(){
     document.getElementById("wins").innerText = wins;
+    document.getElementById("losses").innerText = losses;
     document.getElementById("letterGuess").innerText = letterGuess;
     document.getElementById("remainingGuess").innerText = remainingGuess;
     
@@ -40,11 +42,12 @@ function updateDisplay(){
 function resetGameLost() {
     remainingGuess = maxTries;
     gameStarted = false;
+    losses++;
     //gaveOver = true;
     document.getElementById("currentWord").innerText = " ";
     guessWord = [];
     letterGuess = [];
-    document.getElementById("header").innerText = "Booo, you lost. Press any key to try again.";
+    document.getElementById("header").innerText = "YOU LOST. PRESS ANY LETTER TO TRY AGAIN.";
 }
 
 //Win Game__________________
@@ -55,9 +58,13 @@ function resetGameWin() {
     guessWord = [];
     letterGuess = [];
     gameStarted = false;
-    document.getElementById("header").innerText = "You won- huzzah! Press any key to keep playing.";
+    document.getElementById("header").innerText = "YOU WIN! PRESS ANY LETTER TO KEEP PLAYING.";
 }
 
+//Wait until page fully loads, then start game
+window.onload = function(){
+    startGame();
+}
 
 //Key to start
 document.onkeyup = function(event){
@@ -93,14 +100,14 @@ function startGame(){
 
     //update display
     updateDisplay();
-    document.getElementById("header").innerText = "Guess the letter!";
+    document.getElementById("header").innerText = "PRESS ANY LETTER TO START";
 }
 
-//pick a word
+//pick a word/pick a word
 function pickWord(){
     currentWord = wordChoice[Math.floor(Math.random() * wordChoice.length)];
     for (var i = 0; i < currentWord.length; i++) {
-        guessWord.push("_\xa0");
+        guessWord.push("__\xa0");
     };
 }
 //User maxes out tries and game ends/resets
@@ -152,3 +159,4 @@ function validateCheck() {
     }
 }
 
+// startGame();
